@@ -1,0 +1,275 @@
+---
+title: "The Gourd, the Bad, and the Ugly:" 
+subtitle: "A Yerba Maté Tale"
+from: markdown+emoji
+format: 
+  revealjs:
+    menu: false 
+    embed-resources: true
+    theme: urbn.scss    
+    logo: images/urban-institute-logo-2.png
+    include-after-body: format-title-page.html
+    incremental: true   
+title-slide-attributes: 
+    data-background-image: images/urban-institute-logo-1.png
+    data-background-size: 25%,20%
+    data-background-position: 3% 85%,98% 83%
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Origins and History
+
+## Where does it come from? {.nostretch}
+
+
+![](images/growing-range.png){.r-fit-text width="40%"}
+
+
+::: {.notes}
+Located exclusively in northern Argentina, southern Brazil, Uruguay, and
+Paraguay
+:::
+
+
+## What does it come from?
+
+::: columns
+::: {.column width="40%"}
+
+
+::: {.fragment fragment-index="1" .fade-in-then-out}
+::: {style="font-size: 75%"}
+Leaves from the *Ilex paraguariensis* evergreen shrub-tree
+:::
+:::
+
+::: {.fragment fragment-index="2" .fade-in-then-out}
+::: {style="font-size: 75%"}
+They are trimmed by hand, dried, ground, and then aged in a controlled environment for up
+to 24 months
+:::
+::: 
+
+::: {.fragment fragment-index="3"}
+::: {style="font-size: 80%"}
+::: {.callout-note  title="Fact"}
+Once brewed it contains more antioxidants than any other tea-based drink. 
+:::
+::: 
+::: 
+:::
+
+::: {.column width="60%"}
+![](images/plant-of-the-month.png)
+:::
+
+:::
+
+## An Indigenous tradition
+
+::: {.incremental}
+-   Originally harvested and consumed by the Guaraní people in
+    present-day Paraguay
+-   Its group consumption originates from Guaraní
+    celebrations in honor of Tupâ, the god of rain and water
+-   Other Indigenous people consumed mate including the Charrúa in
+    Uruguay and Tupí in Brazil
+:::
+
+::: {.notes}
+
+-   The Guaraní people call it "ka'a" (herb)
+-   The Tupí people called it "what keeps us alive"
+:::
+
+## Etymology
+
+The word "Maté" comes from the Quechua "Mati" which means "container for a drink"
+
+. . . 
+
+::: {.callout-note}
+Maté is not the tea but the vessel! <br> Although it's most common to say you're *"drinking matè"*, this is only for brevity.
+:::
+
+## A tool of Spanish empire
+
+> The history of mate is a case study of how American
+plants were turned into commodities to strengthen European rule over
+Indigenous peoples rather than to foster their autonomy and
+independence.
+
+—*Sarreal, Julia. The Guaraní and their missions: a socioeconomic history. Stanford University Press, 2014*
+
+## A tool of Spanish empire
+
+::: {.incremental}
+-   Mate seeds have extremely hard shells and are very difficult to
+    germinate.
+-   Drawing on Guaraní knowledge and labor, the missions became the
+    first site to domesticate the plant
+-   By the 17th century, it had become the chief export of the Guaraní
+    territories, above sugar, wine and tobacco, which had previously
+    dominated
+
+:::
+::: notes
+
+-   Maté was therefore turned into a "tool of empire" that connected
+    regions, acculturated Guaraní people, and funded the colonial
+    government.
+    
+Mainly, other caffeneited drinks were already popular in Europe and the
+difficulties in domesticating and transplanting maté made them say no
+thanks
+
+to this day, the social rituals associated with drinking mate----sharing
+one same vessel and straw----aren't accepted everywhere.
+:::
+
+
+
+## Green gold
+
+-   After the Jesuits were expelled, the maté plantations were
+    abandoned and maté was harvested in the wild again
+-   Brazil, Argentina, and Paraguay were competing to dominate the trade
+-   Some of the areas where maté grew wild were the object of
+    territorial disputes among them
+  
+## Maté wars
+
+
+-   These disputes led to the breakout of the **Triple Alliance War**
+    (1864--1870) that turned Brazil and Argentina against Paraguay.
+-   By the end of the war, Brazil annexed large
+    mate-producing areas and dethroned Paraguay as the world's top
+    producer.
+
+## Brazil changes its mind
+
+-   By the 1930s, Brazil was more focused on developing their coffee
+    exports
+-   Argentina, which had long been the largest consumer, finally became
+    the largest producer.
+
+
+## Maté today
+
+::: {.incremental}
+-   Argentina, Brazil, and Paraguay produce 1.4 million tons per year,
+    but **less than 5% is exported**
+
+-   Argentina is currently the largest producer and overall consumer
+
+-   **But** Uruguayans drink twice as much per capita (22 lb per year!!)
+:::
+
+## How to be good at :soccer:
+
+:::: {.columns}
+
+::: {.column width="100%"}
+```{r}
+library(tidyverse)
+library(urbnthemes)
+urbnthemes::set_urbn_defaults()
+# Data
+mate_consumption <- tibble(country = c("Argentina", "Uruguay", "Brasil"), pounds = c(1100, 530, 26))
+
+# Sorting data
+
+
+mate_consumption <- mate_consumption %>% arrange(desc(pounds))
+
+flag_colors <- c("Argentina" = "#6CACE4", 
+                 "Uruguay" = "#0038a8",  
+                 "Brasil" = "#009c3b") 
+# Plot
+ggplot(mate_consumption, aes(x = reorder(country, pounds), y = pounds, fill = country)) +
+  geom_col() +
+  scale_fill_manual(values = flag_colors) + 
+  labs(title = "Argentina's national team brought 1,100 pounds of yerba to Qatar in 2022",
+       subtitle = "Coincidence? I don't think so")
+
+```
+
+:::
+
+::::
+
+## Best team mascot 
+
+![Botija, the thermos](images/botija.jpeg)
+
+## How to prepare (cebar) maté
+
+::: {.incremental}
+-   Fill the máte up to three-quarters full with dry herb 
+    and shake off any powder
+-   Pour **a little** lukewarm water on one side
+-   Boil water to 78 °C
+-   Insert your straw or *bombilla* on the edge of the wet herbs
+-   Pour water directly onto the straw, keeping one side as dry as
+    possible
+-   Enjoy!
+
+:::
+
+## Other ways 
+
+::: {.incremental}
+- In Paraguay, it is more common to drink with cold water (tereré)
+- Some people put sugar on it and even oranges. Go wild.
+:::
+
+## Maté standards
+
+::: {.incremental}
+
+- Everyone drinks from the same maté and straw
+( [*bombilla*](https://en.wikipedia.org/wiki/Bombilla "Bombilla") ).
+- The maté is given by the brewer (el cebador) to each person, often in a
+circle, in turns. 
+- The recipient drinks the few mouthfuls in the container, and then
+returns the mate to the brewer
+- The brewer then refills it and passes it to the next
+person in clockwise order. 
+
+:::
+
+::: {.notes}
+- Drinking mate is often a communal ritual following customary rules.
+:::
+
+--- 
+
+
+::: {.callout-important}
+The recipient is not supposed to give thanks until the maté is completely done, otherwise you might not be served any more *mates*.
+:::
+
+. . .
+
+::: {.callout-important}
+It is considered rude to move the straw around
+:::
+
+. . .
+
+::: {.callout-tip}
+It’s totally acceptable to slurp the mate at the end of your turn. It's actually a sign of respect and letting everyone know you're done. 
+:::
+
+::: {.notes}
+So wrapping up, my whole motivation for giving this talk was to convince
+you we should adopt a mate team standard that's at least as rigorous as
+Argentina's
+:::
+
+# Enjoy!
+
+
+
