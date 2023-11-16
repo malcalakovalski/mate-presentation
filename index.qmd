@@ -30,7 +30,7 @@ and Paraguay
 :::
 
 ::: {.column width="50%"}
-![](images/growing-range.png){.r-fit-text width="40%"}
+![](images/growing-range.png){.r-fit-text width="80%"}
 :::
 :::
 
@@ -169,7 +169,7 @@ one same vessel and straw----aren't accepted everywhere.
 ```{r}
 library(tidyverse)
 library(urbnthemes)
-urbnthemes::set_urbn_defaults()
+urbnthemes::set_urbn_defaults(base_size = 10)
 # Data
 mate_consumption <- tibble(country = c("Argentina", "Uruguay", "Brasil"), pounds = c(1100, 530, 26))
 
